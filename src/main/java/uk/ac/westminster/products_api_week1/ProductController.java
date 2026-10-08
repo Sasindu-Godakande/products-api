@@ -41,4 +41,15 @@ public class ProductController {
         products.add(product);
         return product;
     }
+
+    // DELETE /products/{id}  → remove one product
+    @DeleteMapping("/{id}")
+    public String deleteProduct(@PathVariable Integer id) {
+        Product found = getProductById(id);   // reuse your search method
+        if (found != null) {
+            products.remove(found);
+            return "Deleted product " + id;
+        }
+        return "Product " + id + " not found";
+    }
 }

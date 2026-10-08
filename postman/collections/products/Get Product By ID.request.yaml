@@ -1,0 +1,5 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/products/1"
+method: GET
+order: 917615091198254
