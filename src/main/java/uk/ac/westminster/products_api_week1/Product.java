@@ -1,9 +1,5 @@
 package uk.ac.westminster.products_api_week1;
 
-import org.springframework.web.bind.annotation.*;
-
-@RestController
-@RequestMapping("/products")
 public class Product {
 
     private Integer id;
@@ -19,17 +15,6 @@ public class Product {
 
     // Default constructor - needed by Spring for @RequestBody
     public Product() {
-    }
-
-    @GetMapping("/{id}")
-    public Product getProductById(@PathVariable Integer id) {
-        return new Product(id, "laptop", 5000.00);
-    }
-
-    @PostMapping
-    public Product addProduct(@RequestBody Product product) {
-        System.out.println(product);
-        return product;
     }
 
     public Integer getId() { return id; }
