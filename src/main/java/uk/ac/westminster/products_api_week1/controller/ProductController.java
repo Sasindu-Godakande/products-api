@@ -17,7 +17,6 @@ public class ProductController {
     // GET /products  → all products
     @GetMapping
     public List<Product> getAllProducts() {
-        System.out.println("getproduct method called");
         return productService.getAllProducts();
     }
 
