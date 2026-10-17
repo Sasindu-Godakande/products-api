@@ -1,0 +1,6 @@
+$kind: http-request
+name: "05 Delete Product By ID 1"
+description: "Task 14. Expect 200 with an empty body."
+url: "{{base_url}}/products/1"
+method: DELETE
+order: 5000

@@ -1,0 +1,6 @@
+$kind: http-request
+name: "07 Get Product By ID 99 - 404 Experiment"
+description: "Task 15. Returns 200 with an empty body - that is the WRONG status for something that does not exist (should be 404). Fixed in Lecture 6."
+url: "{{base_url}}/products/99"
+method: GET
+order: 7000

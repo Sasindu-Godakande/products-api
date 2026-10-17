@@ -1,0 +1,9 @@
+$kind: http-request
+name: "09 Search Products - Lap"
+description: "Task 18. Partial match - expect only products whose name contains 'Lap'."
+url: "{{base_url}}/products/search?name=Lap"
+method: GET
+queryParams:
+  - key: name
+    value: Lap
+order: 9000

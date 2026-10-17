@@ -1,0 +1,6 @@
+$kind: http-request
+name: "04 Get Product By ID 1"
+description: "Task 14. Expect 200 and the Laptop."
+url: "{{base_url}}/products/1"
+method: GET
+order: 4000
