@@ -2,6 +2,7 @@ package uk.ac.westminster.products_api_week1.service;
 
 import org.springframework.stereotype.Service;
 import uk.ac.westminster.products_api_week1.dto.DigitalProduct;
+import uk.ac.westminster.products_api_week1.dto.Discountable;
 import uk.ac.westminster.products_api_week1.dto.PhysicalProduct;
 import uk.ac.westminster.products_api_week1.dto.Product;
 
@@ -44,5 +45,15 @@ public class ProductService {
         return products.stream().filter(p -> p.getName().contains(name)).toList();
 
 
+    }
+
+    public List<String> getAllSummaries() {
+
+        List<String> summaries = new ArrayList<>();
+
+        for (Product p : products) {
+            summaries.add(p.getSummary());
+        }
+        return summaries;
     }
 }
