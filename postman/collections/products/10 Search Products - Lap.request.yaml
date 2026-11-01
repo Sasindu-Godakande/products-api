@@ -1,0 +1,7 @@
+$kind: http-request
+description: Task 18. Partial match - expect only products whose name contains 'Lap'.
+url: "{{base_url}}/products/search?name=Lap"
+method: GET
+queryParams:
+  name: Lap
+order: 9000

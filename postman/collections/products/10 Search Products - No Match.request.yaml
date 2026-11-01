@@ -1,9 +1,0 @@
-$kind: http-request
-name: "10 Search Products - No Match"
-description: "Task 18. Expect 200 and [] - an empty list, not an error."
-url: "{{base_url}}/products/search?name=Keyboard"
-method: GET
-queryParams:
-  - key: name
-    value: Keyboard
-order: 10000

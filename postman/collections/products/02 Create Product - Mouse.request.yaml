@@ -1,16 +1,16 @@
 $kind: http-request
-name: "02 Create Product - Mouse"
-description: "Task 11/14. Expect 200 and id 2."
+description: Task 11/14. Expect 200 and id 2.
 url: "{{base_url}}/products"
 method: POST
 headers:
-  - key: Content-Type
-    value: application/json
+  Content-Type: application/json
 body:
   type: json
   content: |-
     {
       "name": "Mouse",
-      "price": 24.99
+      "price": 24.99,
+      "weightKg": 0.3,
+      "dimensions": "5cm x 4cm x 5cm"
     }
 order: 2000

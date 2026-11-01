@@ -1,0 +1,7 @@
+$kind: http-request
+description: Task 18. Expect 200 and [] - an empty list, not an error.
+url: "{{base_url}}/products/search?name=Keyboard"
+method: GET
+queryParams:
+  name: Keyboard
+order: 10000

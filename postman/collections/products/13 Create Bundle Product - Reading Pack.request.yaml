@@ -1,0 +1,22 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/products"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Reading Pack\",\r
+
+    \  \"price\": 10.00,\r
+
+    \  \"items\": [\r
+
+    \    { \"name\": \"C# Basics E-book\", \"price\": 4.5, \"downloadUrl\": \"/dl/1\", \"fileSizeMb\": 2.0 },\r
+
+    \    { \"name\": \"Bookmark\", \"price\": 5.5, \"weightKg\": 0.01, \"dimensions\": \"5cm x 15cm\" }\r
+
+    \  ]\r
+
+    }"
+order: 12000

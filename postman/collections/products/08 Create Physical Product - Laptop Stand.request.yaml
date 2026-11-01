@@ -1,0 +1,16 @@
+$kind: http-request
+description: Task 18. Adds a third product so the search has more to filter.
+url: "{{base_url}}/products"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |
+    {
+      "name": "Laptop Stand",
+      "price": 39.99,
+      "weightKg": 2.5,
+      "dimensions": "35cm x 25cm + 4.5cm"
+    }
+order: 8000

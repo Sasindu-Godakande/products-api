@@ -4,9 +4,11 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.DEDUCTION)
-@JsonSubTypes({@JsonSubTypes.Type(DigitalProduct.class), @JsonSubTypes.Type(PhysicalProduct.class)
-}
-)
+@JsonSubTypes({
+        @JsonSubTypes.Type(DigitalProduct.class),
+        @JsonSubTypes.Type(PhysicalProduct.class),
+        @JsonSubTypes.Type(BundleProduct.class)
+        })
 
 public abstract class Product {
 

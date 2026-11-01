@@ -1,0 +1,18 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/products"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Antivirus Sofoware\",\r
+
+    \  \"price\": 49.99,\r
+
+    \  \"downloadUrl\": \"download/antivirus/software/newupdate\",\r
+
+    \  \"fileSizeMb\": 299.49\r
+
+    }"
+order: 8558

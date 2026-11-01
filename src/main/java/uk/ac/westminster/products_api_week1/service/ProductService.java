@@ -1,8 +1,8 @@
 package uk.ac.westminster.products_api_week1.service;
 
 import org.springframework.stereotype.Service;
+import uk.ac.westminster.products_api_week1.dto.BundleProduct;
 import uk.ac.westminster.products_api_week1.dto.DigitalProduct;
-import uk.ac.westminster.products_api_week1.dto.Discountable;
 import uk.ac.westminster.products_api_week1.dto.PhysicalProduct;
 import uk.ac.westminster.products_api_week1.dto.Product;
 
@@ -21,6 +21,17 @@ public class ProductService {
 
         products.add(new PhysicalProduct( nextId++, "27-inch Monitor", 249.99,
                 5.4, "61cm x 41cm x 18cm"));
+
+        DigitalProduct printerSoftware = new DigitalProduct(nextId++, "Printer Software", 99.49,
+                "downloads/3dprinter/software", 50.5);
+        products.add(printerSoftware);
+
+        PhysicalProduct printer = new PhysicalProduct(nextId++, "Printer", 200.50,
+                10.5, "50cm x 75cm x 20cm");
+        products.add(printer);
+
+        products.add(new BundleProduct(nextId++, "3D Printer",
+                299.99, List.of(printerSoftware, printer)));
     }
 
     public List<Product> getAllProducts() {
