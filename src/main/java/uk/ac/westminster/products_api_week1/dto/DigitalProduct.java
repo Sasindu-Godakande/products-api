@@ -3,7 +3,7 @@ package uk.ac.westminster.products_api_week1.dto;
 public class DigitalProduct extends Product implements Discountable {
     private String downloadUrl;
     private double fileSizeMb;
-    private double discountedPrice;
+    private double discountRate;
 
     public DigitalProduct() {
     }
@@ -30,11 +30,14 @@ public class DigitalProduct extends Product implements Discountable {
 
     @Override
     public void applyDiscount(double rate) {
-        discountedPrice = getPrice() * (1 - rate);
+        if (rate < 0 || rate > 1) {
+            throw new IllegalArgumentException("Discount rate must be between 0.0 and 1.0");
+        }
+        discountRate = rate;
     }
 
     @Override
     public double getDiscountedPrice() {
-        return discountedPrice;
+        return getPrice() * (1 - discountRate);
     }
 }

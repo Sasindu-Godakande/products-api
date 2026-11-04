@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(BundleProduct.class)
         })
 
-public abstract class Product {
+public abstract class Product{
 
 
     private Long id;
@@ -53,5 +53,4 @@ public abstract class Product {
     }
 
     public abstract String getSummary();
-
 }

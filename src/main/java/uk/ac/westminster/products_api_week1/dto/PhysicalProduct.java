@@ -6,7 +6,7 @@ package uk.ac.westminster.products_api_week1.dto;
 public class PhysicalProduct extends Product implements Discountable {
     private double weightKg;
     private String dimensions;
-    private double discountedPrice;
+    private double discountRate;
 
     public PhysicalProduct() {
     }
@@ -33,12 +33,14 @@ public class PhysicalProduct extends Product implements Discountable {
 
     @Override
     public void applyDiscount(double rate) {
-        double capped = Math.min(rate, 0.20);
-        discountedPrice = getPrice() * (1 - capped);
+        if (rate < 0 || rate > 1) {
+            throw new IllegalArgumentException("Discount rate must be between 0.0 and 1.0");
+        }
+        discountRate = Math.min(rate, 0.2);
     }
 
     @Override
     public double getDiscountedPrice() {
-        return discountedPrice;
+        return getPrice() * (1 - discountRate);
     }
 }

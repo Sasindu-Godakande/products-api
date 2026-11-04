@@ -16,11 +16,15 @@ public class ProductService {
     private Long nextId = 1L;
 
     public ProductService() {
-        products.add(new DigitalProduct(nextId++, "Clean Code (E-book)", 29.99,
-                "/downloads/clean-code.pdf", 4.2));
+        DigitalProduct p1 = new DigitalProduct(nextId++, "Clean Code (E-book)", 29.99,
+                "/downloads/clean-code.pdf", 4.2);
+        p1.applyDiscount(0.5);
+        products.add(p1);
 
-        products.add(new PhysicalProduct( nextId++, "27-inch Monitor", 249.99,
-                5.4, "61cm x 41cm x 18cm"));
+        PhysicalProduct p2 = new PhysicalProduct(nextId++, "27-inch Monitor", 249.99,
+                5.4, "61cm x 41cm x 18cm");
+        p2.applyDiscount(0.5);
+        products.add(p2);
 
         DigitalProduct printerSoftware = new DigitalProduct(nextId++, "Printer Software", 99.49,
                 "downloads/3dprinter/software", 50.5);
